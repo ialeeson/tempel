@@ -804,7 +804,7 @@ If called interactively, select a template with `completing-read'."
                        (tempel--delete-word name)
                        (tempel--insert (cdr template) nil)
                        t))
-          (put hook 'no-self-insert t)
+          ;; (put hook 'no-self-insert t)
           (define-abbrev table name 'Template hook
             :system t :enable-function
             (lambda () (assq (car template) (tempel--templates))))))
